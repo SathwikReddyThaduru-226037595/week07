@@ -4,7 +4,10 @@ on:
   # Manual trigger for the workflow
   workflow_dispatch:
 
-
+# Force all actions onto Node.js 24 to clear the Node 20 deprecation warning
+# (azure/login@v2 has no newer major version yet - see Azure/login issue #577)
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
 
   # =========================================================
