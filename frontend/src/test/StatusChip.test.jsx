@@ -29,3 +29,7 @@ describe("StatusChip", () => {
     ).toBeInTheDocument();
   });
 });
+import { test as _failTest, expect as _failExpect } from "vitest";
+_failTest("7.2C evidence: intentional failure to prove CI gate", () => {
+  _failExpect(true).toBe(false);
+});
